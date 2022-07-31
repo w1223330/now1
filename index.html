@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex 布局</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: rgb(213, 215, 218);
+      }
+      /* * {
+        border: 1px solid rgb(8, 8, 8);
+      }*/
+      .yinying {
+        box-shadow: 5px 5px 5px #888888;
+      }
+      .flex {
+        display: flex;
+      }
+      .baise {
+        background-image: linear-gradient(#fbb9b9, #9198e5);
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .mg8 {
+        margin: 8px;
+      }
+      .mgr8 {
+        margin-right: 8px;
+      }
+      .mgt8 {
+        margin-top: 8px;
+      }
+      .daohang {
+        padding: 10px 20px;
+        border-bottom: 1px solid rgb(213, 215, 218);
+        font-size: 18px;
+        color: rgb(13, 2, 2);
+      }
+      .juzhong {
+        text-align: center;
+      }
+      @media (max-width: 600px) {
+        .cebian {
+          display: none;
+        }
+        .neirong {
+          flex-direction: column;
+        }
+        .shujuqu {
+          flex-direction: column;
+        }
+        .youqu {
+          margin-left: 8px;
+        }
+        .shuju {
+          margin: 0 0 8px;
+          flex: auto;
+        }
+      }
+      .beijingse {
+        background-image: linear-gradient(#fbb9b9, #9198e5);
+      }
+      .youbeijing {
+        background-image: linear-gradient(#fbb9b9, #9198e5);
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!-- 侧边栏 -->
+    <div style="width: 200px; z-index: 2" class="beijingse cebian yinying">
+      <!--头像-->
+      <div
+        style="
+          padding: 10px;
+          align-items: center;
+          justify-content: center;
+          border: bottom 10px solid rgb(68, 65, 65);
+        "
+        class="flex"
+      >
+        <img
+          src="https://s1.ax1x.com/2022/07/29/vPAPEV.png"
+          alt="l0go"
+          width="60px"
+          height="60px"
+        />
+        <div style="margin-left: 10px" class=""></div>
+      </div>
+      <!--导航栏-->
+      <div class="flex1">
+        <p class="daohang"><b>个人信息栏</b></p>
+
+        <div class="daohang">姓名:啊了</div>
+        <div class="daohang">性别:男</div>
+        <div class="daohang">出生日期:1999.3.31</div>
+        <div class="daohang">籍贯:汉族</div>
+        <div class="daohang">学历:大学本科在读</div>
+        <div class="daohang">户籍地:广东梅州</div>
+        <div class="daohang">居住地:广东广州</div>
+        <p style="font-size: 12px" class="daohang">
+          <b>邮箱:1160218830@qq.com</b>
+        </p>
+      </div>
+    </div>
+    <!-- 主区域 -->
+    <div class="flex1 flex column yinying">
+      <!--头部栏-->
+      <div style="height: 80px; z-index: 1" class="beijingse yinying juzhong">
+        <p style="font-size: 25px; color: rgba(0, 0, 0, 0.907)">
+          <b>啊了的简历</b>
+        </p>
+      </div>
+      <!--内容栏-->
+      <div style="overflow: auto" class="neirong flex flex1">
+        <!--左区-->
+        <div style="flex: 3" class="flex column mg8">
+          <!--数据区-->
+          <div class="flex shujuqu">
+            <!--数据块-->
+            <div
+              style="
+                padding: 9px 0;
+
+                text-align: center;
+              "
+              class="shuju flex1 baise mgr8 yinying juzhong"
+            >
+              学历专业<br />
+              大学本科<br />
+              机器人工程
+            </div>
+            <div
+              style="
+                padding: 15px 0;
+
+                text-align: center;
+              "
+              class="shuju flex1 baise mgr8 yinying"
+            >
+              毕业学校<br />
+              广东******
+            </div>
+
+            <div
+              style="
+                padding: 9px 0;
+
+                text-align: center;
+              "
+              class="shuju flex1 baise yinying"
+            >
+              联系方式<br />
+              V:*******<br />
+              电话:******
+            </div>
+          </div>
+          <!--列表区-->
+          <div class="flex column yinying"></div>
+          <!--列表项-->
+          <div style="height: 160px; padding: 15px" class="baise mgt8 yinying">
+            主修课程:STM32嵌入式原理与应用、Soliworks应用、MATLAB基础应用、PLC课程设计、
+            ABB工业机器人编程及仿真、51单片机基础应用、传感器检测技术、C语言程序设计、
+            CAD制图、自动控制原理、现场总线技术、
+          </div>
+          <div style="height: 160px; padding: 15px" class="baise mgt8 yinying">
+            相关技能<br />
+            会使用:VS code; keil5;Soliworks;proteus 8; ABBrobotsdutio;CAD制图;GT
+            Designer3;GX Works2 <br />
+            计算机水平:office 全国一级
+            精通Word,掌握基本的PowerPoint技能,熟悉excel
+          </div>
+          <div style="height: 160px; padding: 15px" class="baise mgt8 yinying">
+            奖勤助贷部<br />
+            负责机电工程学院学生的助学金的筛选和审核，负责学校各类活动的活动纪要。
+            参与青马工程项目，多次参与商业策划书编写。
+          </div>
+          <div style="height: 160px" class="baise mgt8 yinying">
+            自我评价<br />
+
+            良好的公共关系意识，善于沟通，具备一定的活动策划和组织协调能力。
+            良好的心态和责任感，吃苦耐劳，擅于管理时间，勇于面对变化和挑战。
+          </div>
+        </div>
+        <!--右区-->
+        <div style="flex: 1" class="youqu flex column mgr8 mgt8">
+          <!--提示区-->
+          <div style="height: 150px; padding: 15px" class="youbeijing yinying">
+            期望工资<br />
+            *k-*k
+          </div>
+          <!--信息区-->
+          <div
+            style="height: 350px; padding: 15px"
+            class="youbeijing mgt8 yinying"
+          >
+            求职意向<br />**工程师
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
